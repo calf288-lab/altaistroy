@@ -84,12 +84,12 @@ export default function Calculator({ onOpenConsultationWithData }: CalculatorPro
     }
   };
 
-  const getMessengerText = () => {
+  const getMessengerText = (phoneNum?: string) => {
     const text = `Здравствуйте! Рассчитал на сайте СтройАлтай:
 Тип: ${getTypeName()}
 Объем/Площадь: ${area} ${projectType === 'foundation' ? 'м³' : 'м²'}
 Локация: ${location}
-Ориентир сметы: ${calculation.min} — ${calculation.max} ₽.
+Ориентир сметы: ${calculation.min} — ${calculation.max} ₽.${phoneNum ? `\nМой номер для связи: ${phoneNum}` : ''}
 Интересует точный расчет и выезд на замеры.`;
     return encodeURIComponent(text);
   };
@@ -98,6 +98,14 @@ export default function Calculator({ onOpenConsultationWithData }: CalculatorPro
     e.preventDefault();
     if (!clientPhone) return;
     setSubmitted(true);
+
+    const waUrl = `https://wa.me/79317777223?text=${getMessengerText(clientPhone)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+    if (typeof window !== 'undefined' && (window as any).ym && (window as any).YM_ID) {
+      (window as any).ym((window as any).YM_ID, 'reachGoal', 'calculator_lead');
+    }
+
     if (onOpenConsultationWithData) {
       onOpenConsultationWithData(`${getTypeName()} ${area}м² в ${location}`);
     }
@@ -336,8 +344,17 @@ export default function Calculator({ onOpenConsultationWithData }: CalculatorPro
 
               {/* Or Quick Callback form */}
               {submitted ? (
-                <div className="p-3.5 rounded-xl bg-[#193322] border border-[#2d633f] text-center text-xs text-[#a3e6ba]">
-                  ✓ Заявка на расчет принята! Бригадир Василий перезвонит в течение 15 минут.
+                <div className="p-3.5 rounded-xl bg-[#193322] border border-[#2d633f] text-center text-xs text-[#a3e6ba] space-y-2">
+                  <div>✓ Расчет подготовлен и направлен в WhatsApp на номер +7 (931) 777-72-23!</div>
+                  <a
+                    href={`https://wa.me/79317777223?text=${getMessengerText(clientPhone)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#17522a] hover:bg-[#1d6635] text-white rounded-lg font-bold text-[11px] transition-colors"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5 text-[#4ade80]" />
+                    <span>Открыть диалог в WhatsApp</span>
+                  </a>
                 </div>
               ) : (
                 <form onSubmit={handleCallbackSubmit} className="space-y-2 pt-1">

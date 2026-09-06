@@ -24,9 +24,41 @@ export default function ConsultationModal({
 
   if (!isOpen) return null;
 
+  const getCompiledText = () => {
+    return `Здравствуйте! Заявка на расчет с сайта СтройАлтай:
+👤 Имя: ${name.trim() || 'Клиент'}
+📱 Телефон: ${phone.trim()}
+📍 Район: ${location}
+🏗️ Интересует: ${serviceTitle || 'Консультация и выезд на замер на Алтае'}
+📲 Канал связи: ${messenger === 'whatsapp' ? 'WhatsApp' : messenger === 'max' ? 'Мессенджер MAX' : 'Телефон'}`;
+  };
+
+  const getWhatsAppUrl = () => {
+    return `https://wa.me/79317777223?text=${encodeURIComponent(getCompiledText())}`;
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!phone) return;
+
+    const compiled = getCompiledText();
+    const encoded = encodeURIComponent(compiled);
+
+    // Direct forwarding to +79317777223
+    if (messenger === 'max') {
+      try {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(compiled);
+        }
+      } catch {
+        // ignore
+      }
+      window.open(CONTACT_INFO.maxMessengerUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      const waUrl = `https://wa.me/79317777223?text=${encoded}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
     setSubmitted(true);
 
     if (typeof window !== 'undefined' && (window as any).ym && (window as any).YM_ID) {
@@ -51,28 +83,42 @@ export default function ConsultationModal({
             <div className="w-14 h-14 mx-auto rounded-full bg-[#52b36b]/20 flex items-center justify-center text-[#52b36b]">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-white font-heading">
-              Заявка принята!
-            </h3>
+            <div>
+              <h3 className="text-xl font-bold text-white font-heading">
+                Заявка сформирована!
+              </h3>
+              <p className="text-xs text-[#9eb0a4] mt-1">
+                Адресована бригадиру Василию на номер <strong className="text-white font-mono">+7 (931) 777-72-23</strong>
+              </p>
+            </div>
             <p className="text-sm text-[#b5c7ba]">
-              Бригадир Василий свяжется с вами в течение 15 минут для уточнения деталей.
+              Диалог открылся в выбранном мессенджере. Нажмите кнопку ниже для подтверждения отправки:
             </p>
-            <div className="pt-3 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-2.5">
               <a
-                href={CONTACT_INFO.whatsappUrl}
+                href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2.5 px-4 rounded-xl bg-[#142d1f] border border-[#245b3a] text-[#4ade80] font-bold text-xs uppercase tracking-wider text-center"
+                className="py-3 px-4 rounded-xl bg-[#16502a] hover:bg-[#1b6334] border border-[#2db059] text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
               >
-                Написать в WhatsApp
+                <MessageSquare className="w-4 h-4 text-[#4ade80]" />
+                <span>Открыть в WhatsApp (+7 931 777-72-23)</span>
               </a>
               <a
                 href={CONTACT_INFO.maxMessengerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2.5 px-4 rounded-xl bg-[#1a2c40] border border-[#2b4b72] text-[#6cb8ff] font-bold text-xs uppercase tracking-wider text-center"
+                className="py-3 px-4 rounded-xl bg-[#1a2c40] hover:bg-[#233b56] border border-[#3b6594] text-[#7ec2ff] font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
               >
-                Написать в MAX
+                <Send className="w-4 h-4 text-[#6cb8ff] rotate-[-20deg]" />
+                <span>Открыть в Мессенджере MAX</span>
+              </a>
+              <a
+                href={CONTACT_INFO.telLink}
+                className="py-2.5 px-4 rounded-xl bg-[#1e2921] text-[#d3a168] font-bold text-xs text-center flex items-center justify-center gap-2 hover:text-white transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                <span>Позвонить напрямую: {CONTACT_INFO.phoneDisplay}</span>
               </a>
             </div>
           </div>
@@ -195,10 +241,22 @@ export default function ConsultationModal({
               <button
                 type="submit"
                 disabled={!agreed}
-                className="w-full py-3.5 rounded-xl bg-[#b68249] hover:bg-[#cb9559] text-[#121614] font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-[#b68249] hover:bg-[#cb9559] text-[#121614] font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center gap-2"
               >
-                Отправить заявку
+                {messenger === 'whatsapp' && <MessageSquare className="w-4 h-4 text-[#121614]" />}
+                {messenger === 'max' && <Send className="w-4 h-4 text-[#121614] rotate-[-20deg]" />}
+                {messenger === 'phone' && <Phone className="w-4 h-4 text-[#121614]" />}
+                <span>
+                  {messenger === 'whatsapp'
+                    ? 'Отправить в WhatsApp (+7 931 777-72-23)'
+                    : messenger === 'max'
+                    ? 'Отправить в Мессенджер MAX'
+                    : 'Заказать звонок на +7 (931) 777-72-23'}
+                </span>
               </button>
+              <p className="text-center text-[10px] text-[#788a7d]">
+                Заявка напрямую поступит бригадиру Василию на <span className="text-white font-mono">+7 (931) 777-72-23</span>
+              </p>
             </form>
           </div>
         )}

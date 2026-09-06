@@ -338,7 +338,7 @@ export default function WinterInteriorSection({ onOpenConsultation }: WinterInte
                 Есть план квартиры или дизайн-проект?
               </div>
               <p className="text-xs text-[#90a294] mt-0.5">
-                Пришлите чертежи или фото в MAX или WhatsApp на номер <strong className="text-white">8 (931) 777-72-23</strong> — Василий сделает предварительный расчет за 30 минут.
+                Пришлите чертежи или фото в MAX или WhatsApp на номер <strong className="text-white">+7 (931) 777-72-23</strong> — Василий сделает предварительный расчет за 30 минут.
               </p>
             </div>
           </div>

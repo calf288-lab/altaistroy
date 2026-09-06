@@ -8,7 +8,7 @@ import apartmentImg from '../assets/images/altai_apartment_renov_1788663563680.j
 import bathroomImg from '../assets/images/altai_bathroom_tiles_1788663579221.jpg';
 
 export const CONTACT_INFO = {
-  phoneDisplay: '8 (931) 777-72-23',
+  phoneDisplay: '+7 (931) 777-72-23',
   phoneRaw: '+79317777223',
   telLink: 'tel:+79317777223',
   whatsappUrl: 'https://wa.me/79317777223?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B0%20%D0%BD%D0%B0%20%D0%90%D0%BB%D1%82%D0%B0%D0%B5',

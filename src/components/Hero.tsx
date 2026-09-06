@@ -97,10 +97,10 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
               <a
                 href={CONTACT_INFO.telLink}
-                className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-[#1b231d]/90 hover:bg-[#242f27] border border-[#324336] text-[#e0e9e3] font-bold text-sm tracking-wide transition-all"
+                className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-[#1b231d]/90 hover:bg-[#242f27] border border-[#324336] text-[#e0e9e3] font-bold text-sm tracking-wide transition-all whitespace-nowrap"
               >
                 <Phone className="w-4 h-4 text-[#d3a168]" />
-                <span>8 (931) 777-72-23</span>
+                <span>+7 (931) 777-72-23</span>
               </a>
             </div>
 

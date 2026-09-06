@@ -16,30 +16,55 @@ export default function LeadForm({ onOpenPrivacy, preselectedService }: LeadForm
   const [agreed, setAgreed] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [copiedText, setCopiedText] = useState(false);
+
+  const getCompiledText = () => {
+    return `Здравствуйте! Заявка с сайта СтройАлтай:
+👤 Имя: ${name.trim() || 'Клиент'}
+📱 Телефон: ${phone.trim()}
+📍 Город / Район: ${location}
+💬 Задача / Вопрос: ${message.trim() || 'Консультация и расчет сметы'}
+📲 Выбранный канал: ${messenger === 'whatsapp' ? 'WhatsApp' : messenger === 'max' ? 'Мессенджер MAX' : 'Телефонный звонок'}`;
+  };
+
+  const getWhatsAppUrl = () => {
+    return `https://wa.me/79317777223?text=${encodeURIComponent(getCompiledText())}`;
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!phone) return;
 
     setIsSubmitting(true);
-    // Emulate sending and trigger Yandex Metrika reachGoal if present
+    const compiled = getCompiledText();
+    const encoded = encodeURIComponent(compiled);
+
+    // Direct forwarding to +79317777223
+    if (messenger === 'max') {
+      try {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(compiled);
+          setCopiedText(true);
+        }
+      } catch {
+        // clipboard access restricted
+      }
+      window.open(CONTACT_INFO.maxMessengerUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      // Default to WhatsApp directly to +79317777223
+      const waUrl = `https://wa.me/79317777223?text=${encoded}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    // Yandex Metrika target
+    if (typeof window !== 'undefined' && (window as any).ym && (window as any).YM_ID) {
+      (window as any).ym((window as any).YM_ID, 'reachGoal', 'lead_send');
+    }
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-
-      // Yandex Metrika target as requested in template
-      if (typeof window !== 'undefined' && (window as any).ym && (window as any).YM_ID) {
-        (window as any).ym((window as any).YM_ID, 'reachGoal', 'lead_send');
-      }
-    }, 600);
-  };
-
-  const getDirectLink = () => {
-    const text = encodeURIComponent(`Здравствуйте! Меня зовут ${name || 'Клиент'}. Город/Район: ${location}. Номер: ${phone}. Вопрос: ${message || 'Хочу проконсультироваться по строительству на Алтае'}`);
-    if (messenger === 'whatsapp') {
-      return `https://wa.me/79317777223?text=${text}`;
-    }
-    return CONTACT_INFO.maxMessengerUrl;
+    }, 400);
   };
 
   return (
@@ -148,31 +173,69 @@ export default function LeadForm({ onOpenPrivacy, preselectedService }: LeadForm
               </div>
 
               {isSuccess ? (
-                <div className="p-8 rounded-2xl bg-[#193623] border border-[#2d633e] text-center space-y-4">
-                  <div className="w-14 h-14 mx-auto rounded-full bg-[#52b36b]/20 flex items-center justify-center text-[#52b36b]">
-                    <CheckCircle2 className="w-8 h-8" />
+                <div className="p-6 sm:p-8 rounded-2xl bg-[#14281c] border border-[#2d633e] space-y-4">
+                  <div className="flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-[#52b36b]/20 flex items-center justify-center text-[#52b36b]">
+                      <CheckCircle2 className="w-8 h-8" />
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-white font-heading">
-                    Заявка успешно отправлена!
-                  </h4>
-                  <p className="text-sm text-[#b8d6c1] max-w-md mx-auto">
-                    Бригадир Василий свяжется с вами в течение 15 минут по номеру <strong className="text-white">{phone}</strong>.
-                  </p>
-                  <div className="pt-3 flex justify-center gap-3">
+                  
+                  <div className="text-center space-y-1.5">
+                    <h4 className="text-xl font-bold text-white font-heading">
+                      Заявка сформирована для +7 (931) 777-72-23!
+                    </h4>
+                    <p className="text-sm text-[#b8d6c1] max-w-md mx-auto">
+                      Диалог с бригадиром Василием открылся в выбранном мессенджере. Если окно заблокировано браузером — нажмите прямую кнопку:
+                    </p>
+                  </div>
+
+                  {/* Direct Action Buttons to +79317777223 */}
+                  <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5">
                     <a
-                      href={getDirectLink()}
+                      href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2.5 rounded-xl bg-[#b68249] text-[#121614] font-bold text-xs uppercase tracking-wider transition-colors"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#16502a] hover:bg-[#1b6334] border border-[#2db059] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg text-center"
                     >
-                      Написать сейчас в {messenger === 'whatsapp' ? 'WhatsApp' : 'MAX'}
+                      <MessageSquare className="w-4 h-4 text-[#4ade80]" />
+                      <span>Открыть WhatsApp (+7 931 777-72-23)</span>
+                    </a>
+
+                    <a
+                      href={CONTACT_INFO.maxMessengerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#1a2c40] hover:bg-[#223a54] border border-[#3b6594] text-[#7ec2ff] font-bold text-xs uppercase tracking-wider transition-all shadow-lg text-center"
+                    >
+                      <Send className="w-4 h-4 rotate-[-20deg]" />
+                      <span>Открыть MAX</span>
+                    </a>
+                  </div>
+
+                  {/* Summary preview of sent lead */}
+                  <div className="p-3 rounded-xl bg-[#0f1812] border border-[#213827] text-left text-xs text-[#9bb3a2] space-y-1">
+                    <div className="text-[11px] font-bold text-[#d3a168] uppercase tracking-wider">
+                      Текст подготовленной заявки:
+                    </div>
+                    <div className="whitespace-pre-line font-mono text-[11px] text-[#c4d6c9] bg-[#141f18] p-2.5 rounded border border-[#233829]">
+                      {getCompiledText()}
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#8ca092]">
+                    <a
+                      href={CONTACT_INFO.telLink}
+                      className="flex items-center gap-1.5 text-[#d3a168] hover:underline font-semibold"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>Позвонить напрямую: {CONTACT_INFO.phoneDisplay}</span>
                     </a>
                     <button
                       type="button"
                       onClick={() => setIsSuccess(false)}
-                      className="px-4 py-2.5 rounded-xl bg-[#233127] text-[#d6ded8] text-xs font-semibold"
+                      className="text-[#9ea09d] hover:text-white underline cursor-pointer"
                     >
-                      Отправить еще
+                      Отправить еще одну заявку
                     </button>
                   </div>
                 </div>
@@ -296,13 +359,24 @@ export default function LeadForm({ onOpenPrivacy, preselectedService }: LeadForm
                   <button
                     type="submit"
                     disabled={isSubmitting || !agreed}
-                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#b68249] to-[#cb965a] hover:from-[#c58f54] hover:to-[#d8a467] text-[#121614] font-extrabold text-sm uppercase tracking-wider shadow-lg transition-all active:scale-[0.99] disabled:opacity-50 cursor-pointer"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-[#b68249] to-[#cb965a] hover:from-[#c58f54] hover:to-[#d8a467] text-[#121614] font-extrabold text-sm uppercase tracking-wider shadow-lg transition-all active:scale-[0.99] disabled:opacity-50 cursor-pointer flex items-center justify-center gap-2"
                   >
-                    {isSubmitting ? 'Отправка заявки...' : 'Отправить заявку бригадиру'}
+                    {messenger === 'whatsapp' && <MessageSquare className="w-4 h-4 text-[#121614]" />}
+                    {messenger === 'max' && <Send className="w-4 h-4 text-[#121614] rotate-[-20deg]" />}
+                    {messenger === 'phone' && <Phone className="w-4 h-4 text-[#121614]" />}
+                    <span>
+                      {isSubmitting
+                        ? 'Отправка...'
+                        : messenger === 'whatsapp'
+                        ? 'Отправить в WhatsApp (+7 931 777-72-23)'
+                        : messenger === 'max'
+                        ? 'Отправить в Мессенджер MAX'
+                        : 'Заказать звонок на +7 (931) 777-72-23'}
+                    </span>
                   </button>
 
-                  <p className="text-center text-[11px] text-[#718276]">
-                    Ваши данные не передаются третьим лицам. Строго для расчета сметы.
+                  <p className="text-center text-[11px] text-[#8ea093]">
+                    Заявка поступит напрямую бригадиру Василию на номер <strong className="text-white font-mono">+7 (931) 777-72-23</strong>
                   </p>
 
                 </form>

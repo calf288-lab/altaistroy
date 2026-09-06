@@ -146,15 +146,15 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             </a>
 
             {/* Direct Phone */}
-            <div className="pl-1 text-right">
+            <div className="pl-1 text-right flex-shrink-0">
               <a
                 href={CONTACT_INFO.telLink}
-                className="text-base font-bold text-white hover:text-[#d3a168] transition-colors tracking-wide flex items-center gap-1.5"
+                className="text-sm xl:text-base font-bold text-white hover:text-[#d3a168] transition-colors tracking-wide flex items-center gap-1.5 whitespace-nowrap"
               >
-                <Phone className="w-4 h-4 text-[#d3a168]" />
-                <span>{CONTACT_INFO.phoneDisplay}</span>
+                <Phone className="w-4 h-4 text-[#d3a168] flex-shrink-0" />
+                <span className="whitespace-nowrap">{CONTACT_INFO.phoneDisplay}</span>
               </a>
-              <span className="text-[10px] text-[#7d8d81] block">Василий (бригадир)</span>
+              <span className="text-[10px] text-[#7d8d81] block whitespace-nowrap">Василий (бригадир)</span>
             </div>
 
             {/* Call request CTA button */}
