@@ -13,18 +13,18 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 bg-[#141815]/95 backdrop-blur-md border-b border-[#2a352c] transition-all">
       {/* Top micro-bar for geography & trust */}
-      <div className="hidden md:block bg-[#0e1210] border-b border-[#1f2721] text-xs text-[#9aa49d] py-1.5 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-4">
+      <div className="hidden md:block bg-[#0e1210] border-b border-[#1f2721] text-xs text-[#9aa49d] py-1.5 px-3 sm:px-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
+          <div className="flex items-center gap-3 xl:gap-4 flex-shrink-0">
             <div className="relative">
               <button
                 type="button"
                 onClick={() => setRegionsOpen(!regionsOpen)}
                 className="flex items-center gap-1.5 hover:text-[#d3a168] transition-colors cursor-pointer text-left"
               >
-                <MapPin className="w-3.5 h-3.5 text-[#d3a168]" />
-                <span>Работаем по Республике Алтай и Алтайскому краю</span>
-                <span className="text-[10px] bg-[#222d25] text-[#b8c5bc] px-1.5 py-0.5 rounded border border-[#2e3e32]">
+                <MapPin className="w-3.5 h-3.5 text-[#d3a168] flex-shrink-0" />
+                <span className="whitespace-nowrap">Республика Алтай и Алтайский край</span>
+                <span className="text-[10px] bg-[#222d25] text-[#b8c5bc] px-1.5 py-0.5 rounded border border-[#2e3e32] whitespace-nowrap">
                   10+ районов
                 </span>
               </button>
@@ -53,84 +53,90 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 </div>
               )}
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="hidden lg:flex items-center gap-1.5 whitespace-nowrap">
               <Clock className="w-3.5 h-3.5 text-[#88978b]" />
               <span>{CONTACT_INFO.workingHours}</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1 text-[#a8b5ab]">
+          <div className="flex items-center gap-3 xl:gap-4 flex-shrink-0 text-right">
+            <span className="hidden lg:flex items-center gap-1 text-[#a8b5ab] whitespace-nowrap">
               <ShieldCheck className="w-3.5 h-3.5 text-[#55a26a]" />
               Официальный договор и гарантия 5 лет
             </span>
-            <span className="text-[#414f43]">|</span>
-            <a href="#interior-winter" className="flex items-center gap-1.5 text-[#d3a168] hover:text-[#e8b67e] font-semibold transition-colors">
-              <Snowflake className="w-3.5 h-3.5 text-[#73c7eb] animate-pulse" />
-              <span>Зимний сезон: отделка квартир и домов под ключ</span>
+            <span className="hidden xl:inline text-[#414f43]">|</span>
+            <a href="#interior-winter" className="flex items-center gap-1.5 text-[#d3a168] hover:text-[#e8b67e] font-semibold transition-colors whitespace-nowrap">
+              <Snowflake className="w-3.5 h-3.5 text-[#73c7eb] animate-pulse flex-shrink-0" />
+              <span>Зимняя отделка квартир и домов</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* Main navigation bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
-        <div className="flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3">
+        <div className="flex items-center justify-between gap-2 lg:gap-3 xl:gap-4">
           
           {/* Logo & Brand */}
-          <a href="#" className="flex items-center gap-3 group text-decoration-none">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#3b4e40] to-[#1c2720] border border-[#4e6855] flex items-center justify-center shadow-lg group-hover:border-[#d3a168] transition-colors">
-              <svg className="w-7 h-7 text-[#d3a168]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <a href="#" className="flex items-center gap-2 sm:gap-2.5 xl:gap-3 group text-decoration-none flex-shrink-0">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#3b4e40] to-[#1c2720] border border-[#4e6855] flex items-center justify-center shadow-lg group-hover:border-[#d3a168] transition-colors flex-shrink-0">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#d3a168]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="m3 21 7.5-13 3 5 2.5-4 5 12Z" fill="#1b241e" />
                 <path d="M7 21h10M12 11l-3 5 3 2 3-2-3-5Z" />
                 <path d="M12 3v3M10 21v-4h4v4" />
               </svg>
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-white font-heading">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-lg sm:text-xl font-bold tracking-tight text-white font-heading whitespace-nowrap">
                   СТРОЙ<span className="text-[#d3a168]">АЛТАЙ</span>
                 </span>
-                <span className="hidden sm:inline-block text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-[#253328] text-[#9dc4a6] border border-[#374c3d]">
+                <span className="hidden sm:inline-block text-[10px] uppercase tracking-wider font-semibold px-1.5 py-0.5 rounded bg-[#253328] text-[#9dc4a6] border border-[#374c3d]">
                   Артель
                 </span>
               </div>
-              <p className="text-[11px] text-[#8e9c91] leading-tight">
+              <p className="text-[11px] text-[#8e9c91] leading-tight hidden 2xl:block">
                 Строительство домов, бань и отделка квартир под ключ
               </p>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-[#c4cfc7]">
-            <a href="#interior-winter" className="text-[#d3a168] hover:text-[#e8b67e] transition-colors flex items-center gap-1.5 font-semibold">
-              <Snowflake className="w-3.5 h-3.5 text-[#73c7eb]" />
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-3.5 2xl:gap-5 text-xs xl:text-sm font-medium text-[#c4cfc7] flex-shrink min-w-0">
+            <a href="#interior-winter" className="text-[#d3a168] hover:text-[#e8b67e] transition-colors flex items-center gap-1 font-semibold whitespace-nowrap">
+              <Snowflake className="w-3.5 h-3.5 text-[#73c7eb] flex-shrink-0" />
               <span>Зимняя отделка</span>
-              <span className="text-[10px] bg-[#292014] text-[#e8b67e] px-1.5 py-0.2 rounded border border-[#543d20]">Сезон</span>
+              <span className="text-[10px] bg-[#292014] text-[#e8b67e] px-1.5 py-0.2 rounded border border-[#543d20] hidden 2xl:inline">Сезон</span>
             </a>
-            <a href="#services" className="hover:text-[#d3a168] transition-colors">Услуги и цены</a>
-            <a href="#calculator" className="hover:text-[#d3a168] transition-colors flex items-center gap-1">
-              <span>Калькулятор сметы</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d3a168]"></span>
+            <a href="#services" className="hover:text-[#d3a168] transition-colors whitespace-nowrap">
+              Услуги<span className="hidden xl:inline"> и цены</span>
             </a>
-            <a href="#portfolio" className="hover:text-[#d3a168] transition-colors">Наши работы</a>
-            <a href="#why-altai" className="hover:text-[#d3a168] transition-colors">Специфика Алтая</a>
-            <a href="#process" className="hover:text-[#d3a168] transition-colors">Этапы</a>
-            <a href="#contacts" className="hover:text-[#d3a168] transition-colors">Контакты</a>
+            <a href="#calculator" className="hover:text-[#d3a168] transition-colors flex items-center gap-1 whitespace-nowrap">
+              <span>Калькулятор<span className="hidden 2xl:inline"> сметы</span></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#d3a168] flex-shrink-0"></span>
+            </a>
+            <a href="#portfolio" className="hover:text-[#d3a168] transition-colors whitespace-nowrap">
+              <span className="hidden xl:inline">Наши </span>работы
+            </a>
+            <a href="#why-altai" className="hover:text-[#d3a168] transition-colors whitespace-nowrap hidden xl:inline">
+              Специфика
+            </a>
+            <a href="#process" className="hover:text-[#d3a168] transition-colors whitespace-nowrap hidden xl:inline">Этапы</a>
+            <a href="#contacts" className="hover:text-[#d3a168] transition-colors whitespace-nowrap">Контакты</a>
           </nav>
 
           {/* Right action area: Messengers & Phone */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2 xl:gap-2.5 flex-shrink-0">
             {/* MAX Messenger Button */}
             <a
               href={CONTACT_INFO.maxMessengerUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#192738] hover:bg-[#20344c] border border-[#2d496b] text-[#5cb0ff] text-xs font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              className="flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-lg bg-[#192738] hover:bg-[#20344c] border border-[#2d496b] text-[#5cb0ff] text-xs font-semibold transition-all hover:scale-[1.02] shadow-sm whitespace-nowrap"
               title="Написать в мессенджер MAX"
             >
               <Send className="w-3.5 h-3.5 rotate-[-20deg]" />
-              <span>Мессенджер MAX</span>
+              <span><span className="hidden xl:inline">Мессенджер </span>MAX</span>
             </a>
 
             {/* WhatsApp Button */}
@@ -138,7 +144,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
               href={CONTACT_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#142d1f] hover:bg-[#1a3a29] border border-[#275c3d] text-[#4ade80] text-xs font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              className="flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-lg bg-[#142d1f] hover:bg-[#1a3a29] border border-[#275c3d] text-[#4ade80] text-xs font-semibold transition-all hover:scale-[1.02] shadow-sm whitespace-nowrap"
               title="Написать в WhatsApp"
             >
               <MessageSquare className="w-3.5 h-3.5" />
@@ -151,8 +157,8 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 href={CONTACT_INFO.telLink}
                 className="text-sm xl:text-base font-bold text-white hover:text-[#d3a168] transition-colors tracking-wide flex items-center gap-1.5 whitespace-nowrap"
               >
-                <Phone className="w-4 h-4 text-[#d3a168] flex-shrink-0" />
-                <span className="whitespace-nowrap">{CONTACT_INFO.phoneDisplay}</span>
+                <Phone className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-[#d3a168] flex-shrink-0" />
+                <span className="whitespace-nowrap font-mono">{CONTACT_INFO.phoneDisplay}</span>
               </a>
               <span className="text-[10px] text-[#7d8d81] block whitespace-nowrap">Василий (бригадир)</span>
             </div>
@@ -161,14 +167,14 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             <button
               type="button"
               onClick={onOpenConsultation}
-              className="hidden xl:inline-flex px-3.5 py-2 rounded-lg bg-[#b68249] hover:bg-[#c99256] text-[#141915] font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer ml-1"
+              className="hidden 2xl:inline-flex px-3.5 py-2 rounded-lg bg-[#b68249] hover:bg-[#c99256] text-[#141915] font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer ml-1 whitespace-nowrap"
             >
               Вызов замерщика
             </button>
           </div>
 
-          {/* Mobile hamburger button */}
-          <div className="flex items-center gap-2 sm:hidden">
+          {/* Mobile/Tablet hamburger button */}
+          <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
             <a
               href={CONTACT_INFO.telLink}
               className="p-2 rounded-lg bg-[#b68249] text-[#141815] flex items-center justify-center font-bold"
@@ -179,7 +185,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-[#1e2621] border border-[#2f3d33] text-[#c9d4cd] hover:text-white"
+              className="p-2 rounded-lg bg-[#1e2621] border border-[#2f3d33] text-[#c9d4cd] hover:text-white cursor-pointer"
               aria-label="Меню"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -191,7 +197,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-[#141815] border-b border-[#2b372d] px-4 py-5 animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-[#141815] border-b border-[#2b372d] px-4 py-5 animate-in slide-in-from-top-2">
           <div className="flex flex-col gap-3 text-base font-medium text-[#d3ded6] mb-5">
             <a 
               href="#interior-winter" 
