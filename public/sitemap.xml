@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-$(cat temp_urls.txt)
+  <url><loc>https://stroyaltai.ru/blog/banya-brus-cena-altai.html</loc></url>
+  <url><loc>https://stroyaltai.ru/blog/banya-kedr-cena.html</loc></url>
+  <url><loc>https://stroyaltai.ru/blog/dom-brus-cena-altai.html</loc></url>
+  <url><loc>https://stroyaltai.ru/blog/dom-kamen-cena-altai.html</loc></url>
+  <url><loc>https://stroyaltai.ru/blog/dom-kedr-cena.html</loc></url>
+  <url><loc>https://stroyaltai.ru/blog/otdelka-kvartir-gorno-altaysk.html</loc></url>
+  <url><loc>https://stroyaltai.ru/google53d57925735631e9.html</loc></url>
 </urlset>
