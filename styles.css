@@ -1,0 +1,142 @@
+/* StroyAltai Design System — Warm Construction Theme */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-body: #f8f7f4;       /* Тёплый светло-серый */
+  --bg-card: #ffffff;
+  --text-primary: #1c1917;  /* Почти чёрный */
+  --text-secondary: #57534e; /* Серый */
+  --accent: #c2410c;        /* Оранжево-древесный (строительный) */
+  --accent-hover: #9a3412;
+  --whatsapp: #25D366;
+  --border: #e7e5e4;
+  
+  /* Typography */
+  --font-main: 'Manrope', sans-serif;
+  
+  /* Spacing & Radius */
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* Header */
+header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Typography */
+h1 { font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 700; margin-bottom: 24px; line-height: 1.2; color: var(--text-primary); }
+h2 { font-size: 1.75rem; font-weight: 600; margin: 48px 0 16px; color: var(--text-primary); }
+h3 { font-size: 1.25rem; font-weight: 600; margin: 32px 0 12px; color: var(--text-primary); }
+p { margin-bottom: 20px; color: var(--text-secondary); }
+strong { color: var(--text-primary); font-weight: 600; }
+
+/* Links */
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+a:hover { color: var(--accent-hover); }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+th { background: #fafaf9; font-weight: 600; color: var(--text-primary); }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) { background: #fafaf9; }
+
+/* Lists */
+ul, ol { margin: 0 0 24px 24px; color: var(--text-secondary); }
+li { margin-bottom: 8px; }
+
+/* Cards (для блоков "Читайте также") */
+.read-also {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 40px 0;
+  box-shadow: var(--shadow);
+}
+.read-also h3 { margin-top: 0; margin-bottom: 16px; font-size: 1.1rem; }
+.read-also ul { margin: 0; list-style: none; }
+.read-also li { margin-bottom: 12px; }
+.read-also a { text-decoration: none; font-weight: 500; }
+.read-also a::before { content: "→ "; color: var(--accent); }
+
+/* Buttons */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--whatsapp);
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container { padding: 24px 16px; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+  .btn-whatsapp { width: 100%; justify-content: center; }
+}
