@@ -112,6 +112,6 @@ date: "2026-10-03"
 
 **[Написать в WhatsApp: +7 931 777-72-23](https://wa.me/79317777223)**
 
-**[Написать в MAX: @14528735](https://web.max.ru/14528735)**
+<a href="https://web.max.ru/14528735" style="display:inline-flex;align-items:center;gap:10px;background:#0079FF;color:#fff!important;text-decoration:none!important;padding:16px 32px;border-radius:12px;font-weight:600;font-size:18px;margin-top:12px;box-shadow:0 4px 12px rgba(0,121,255,.3);">Написать в MAX</a>
 
 <!-- Здесь будет встроен калькулятор стоимости и JSON-LD разметка Article/Service -->
