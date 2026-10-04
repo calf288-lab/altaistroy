@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/blog/remont-sanuzla-gorno-altaysk.html", "destination": "/blog/remont-sanuzla.html", "permanent": true },
+    { "source": "/blog/fundament-na-sklone-gorno-altaysk.html", "destination": "/blog/fundament.html", "permanent": true },
+    { "source": "/blog/zimnyaya-stroyka-gorno-altaysk.html", "destination": "/blog/zimnyaya-stroyka.html", "permanent": true },
+    { "source": "/blog/gostevoj-dom-gornyi-altai.html", "destination": "/blog/gostevoy-dom.html", "permanent": true },
+    { "source": "/blog/profilirovannyj-brus-ili-brevno-altai.html", "destination": "/blog/brus-ili-brevno.html", "permanent": true },
+    { "source": "/blog/kak-vybrat-uchastok-gorno-altaysk.html", "destination": "/blog/vybor-uchastka.html", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/blog/:path*", "destination": "/blog/:path*" }
   ]
