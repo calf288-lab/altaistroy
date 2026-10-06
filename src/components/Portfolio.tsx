@@ -208,6 +208,21 @@ export default function Portfolio() {
         )}
 
       </div>
-    </section>
+    
+        {/* CTA: Ссылка на полный каталог проектов */}
+        <div className="text-center mt-12">
+          <a 
+            href="/blog/proekty-doma-i-bani.html" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#c2410c] hover:bg-[#a8360a] text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <span>Смотреть все проекты с ценами</span>
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p className="mt-3 text-sm text-[#9fb0a3]">
+            Реальные фото, рыночные цены Алтая 2026, сроки строительства
+          </p>
+        </div>
+
+      </section>
   );
 }
