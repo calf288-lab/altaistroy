@@ -8,7 +8,7 @@
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:40px;">
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/aframe/v027.webp" alt="A-frame гостевой дом зимой" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/aframe/v042.webp" alt="A-frame гостевой дом фасад" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Гостевые дома A-frame</figcaption>
   </figure>
   
@@ -47,7 +47,7 @@
 **Срок:** 10–14 недель  
 **Входит:** фундамент (сваи/лента по грунту), коробка, кровля, окна, двери, черновая электрика и сантехника. Чистовая отделка — по желанию.  
 
-*(Фото процесса сборки)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/dom-brus/v023.webp" alt="Коробка дома" width="48%">
   <img src="/images/projects/dom-brus/v025.webp" alt="Фасад готовый" width="48%">
@@ -83,12 +83,12 @@
 
 Узнаваемый треугольный фасад, высокий чек, идеально для аренды или дачи выходного дня.
 
-<img src="/images/projects/aframe/v027.webp" alt="A-frame фасад" width="100%" style="border-radius:8px; margin-bottom:15px;">
+<img src="/images/projects/aframe/v042.webp" alt="A-frame гостевой дом фасад" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** обычно 30–50 м²  
 **Цена от:** 1 000 000 ₽ (коробка) / 1 700 000 ₽ (под ключ)  
 **Срок:** 8–12 недель  
 
-*(Фото A-frame)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/aframe/v028.webp" alt="Интерьер A-frame" width="32%">
   <img src="/images/projects/aframe/v042.webp" alt="Вид сверху" width="32%">
@@ -99,7 +99,7 @@
 
 Отдельный блок малых архитектурных форм. Быстрая сборка, доступная цена, немедленный эффект для участка.
 
-*(Фото террас/навесов)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/terrasa/v006.webp" alt="Терраса пристроенная" width="32%">
   <img src="/images/projects/terrasa/v008.webp" alt="Беседка открытая" width="32%">
@@ -112,7 +112,7 @@
 
 Замена мягкой кровли, металлочерепица, фальц. Стропила, обрешетка, утепление, гидроизоляция.
 
-*(Фото кровли)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/krovlya/v005.webp" alt="Стропила в процессе" width="32%">
   <img src="/images/projects/krovlya/v013.webp" alt="Металлочерепица готово" width="32%">
@@ -125,7 +125,7 @@
 
 Демонтаж, гидроизоляция, замена стояков, плитка, сантехника. Гарантия на протечки.
 
-*(Фото санузлов)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/sanuzel/v016.webp" alt="Санузел белый плитка" width="48%">
   <img src="/images/projects/sanuzel/v018.webp" alt="Инсталляция унитаза" width="48%">
@@ -137,7 +137,7 @@
 
 Черновые и чистовые работы: стяжка, штукатурка, покраска, обои, ламинат, потолки.
 
-*(Фото отделки)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/otdelka/v002.webp" alt="Лаги пола" width="32%">
   <img src="/images/projects/otdelka/v003.webp" alt="Стяжка ровная" width="32%">
@@ -148,7 +148,7 @@
 
 Свайно-винтовые, ленточные, плитные. Геология включена в расчет стоимости.
 
-*(Фото фундаментов)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/fundament/v001.webp" alt="Сваи забиты" width="48%">
   <img src="/images/projects/fundament/v039.webp" alt="Армирование плиты" width="48%">
@@ -163,7 +163,7 @@
 - **Газоблок/пеноблок:** кладка на растворах с противоморозными добавками до −5 °C.
 - **Общая зимняя стройка:** подробный разбор мифов влияния на цену (+10–15% к бетону экономия 15–20% на материалах) и этапов — см. статью «Зимняя стройка дома в Барнауле».
 
-*(Фото зимних объектов)*
+
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/zima/v035.webp" alt="Зимняя коробка" width="48%">
   <img src="/images/projects/zima/v036.webp" alt="Тепляк для бетона" width="48%">
@@ -199,4 +199,4 @@
 
 <a href="https://wa.me/79317777223" target="_blank" rel="noopener" style="display:inline-block; padding:14px 32px; background:#25D366; color:white; text-decoration:none; border-radius:6px; font-weight:bold; margin-top:15px;">💬 Написать в WhatsApp: +7 931 777-72-23</a>
 
-*Цены указаны как ориентир «от» и зависят от грунта уклона комплектации и сезона. Итоговая стоимость фиксируется после выезда и геологии.*
+
