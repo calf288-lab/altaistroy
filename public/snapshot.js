@@ -178,3 +178,53 @@
     document.addEventListener('submit',function(e){ send(formPayload()); },true);
   })();
 </script>
+
+<!-- === ГАЛЕРЕЯ ПРОЕКТОВ (ДОБАВЛЕНО 06.10.2026) === -->
+<section id="our-work" style="padding: 60px 20px; background:#fafafa;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <h2 style="text-align:center; font-size:2rem; color:#2c3e50; margin-bottom:40px; font-family:'Plus Jakarta Sans',sans-serif;">Наши работы</h2>
+    
+    <!-- Главный герой -->
+    <div style="margin-bottom:30px; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+      <img src="/images/projects/dom-brus/hero-house.webp" alt="Дом из бруса с коваными воротами зимой на Алтае" 
+           style="width:100%; height:auto; display:block;">
+    </div>
+    
+    <!-- Сетка остальных типов объектов -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/aframe/v027.webp" alt="A-frame гостевой дом зимой" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Гостевые дома A-frame</figcaption>
+      </figure>
+      
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/banya-brus/v007.webp" alt="Баня из бруса снаружи" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Бани из дерева</figcaption>
+      </figure>
+      
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/fundament/v039.webp" alt="Армирование монолитного фундамента" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Фундаменты любой сложности</figcaption>
+      </figure>
+      
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/krovlya/v013.webp" alt="Металлочерепичная кровля готово" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Кровельные работы</figcaption>
+      </figure>
+      
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/sanuzel/v016.webp" alt="Ремонт санузла белая плитка" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Ремонт санузлов под ключ</figcaption>
+      </figure>
+      
+      <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <img src="/images/projects/otdelka/v004.webp" alt="Отделка интерьера штукатурка покраска" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+        <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Чистовая отделка квартир</figcaption>
+      </figure>
+    </div>
+    
+    <div style="text-align:center; margin-top:40px;">
+      <a href="/blog/proekty-doma-i-bani.html" style="display:inline-block; padding:14px 32px; background:#c2410c; color:white; text-decoration:none; border-radius:6px; font-weight:bold; transition:background .3s;">Все проекты →</a>
+    </div>
+  </div>
+</section>
