@@ -199,6 +199,7 @@
 **Особенности:** сферическая конструкция, экономия материалов до 30%, необычный вид, высокая энергоэффективность. Популярны в Казахстане для глэмпингов и посуточной аренды.
 
 ### Барнхаусы (сарай+дом)
+<img src="/images/projects/formats/barnhouse.webp" alt="barnhouse: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 <img src="/images/projects/formats/barnhouse.webp" alt="Барнхаус: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** 60–150 м²  
 **Цена от:** 1 400 000 ₽ (коробка) / 2 400 000 ₽ (под ключ)  
@@ -206,6 +207,7 @@
 **Особенности:** двускатная крыша, открытая планировка, панорамное остекление торцов. Развитый рынок в Беларуси. Подходит для загородных резиденций и семейного проживания.
 
 ### Модульные дома заводской сборки
+<img src="/images/projects/formats/modular.webp" alt="modular: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 <img src="/images/projects/formats/modular.webp" alt="Модульный дом: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** 30–80 м² (1–3 модуля)  
 **Цена от:** 900 000 ₽ (с доставкой)  
@@ -213,6 +215,7 @@
 **Особенности:** заводская сборка в цеху, доставка на участок краном, подключение к коммуникациям за 1–2 дня. Минимум работ на участке, чистота.
 
 ### Дома-шалаши (cabin) с панорамным остеклением
+<img src="/images/projects/formats/cabin.webp" alt="cabin: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 <img src="/images/projects/formats/cabin.webp" alt="Дом-шалаш: пример формата" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** 25–50 м²  
 **Цена от:** 700 000 ₽ (коробка) / 1 200 000 ₽ (под ключ)  
