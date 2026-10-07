@@ -8,32 +8,32 @@
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:40px;">
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/aframe/v042.webp" alt="A-frame гостевой дом фасад" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/aframe/v042.webp" alt="A-frame: фото объекта" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Гостевые дома A-frame</figcaption>
   </figure>
   
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/banya-brus/v007.webp" alt="Баня из бруса снаружи" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/banya-brus/v007.webp" alt="Бани: фото объекта" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Бани из дерева</figcaption>
   </figure>
   
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/fundament/v039.webp" alt="Армирование монолитного фундамента" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/fundament/v039.webp" alt="Фундаменты: процесс работ" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Фундаменты любой сложности</figcaption>
   </figure>
   
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/krovlya/v013.webp" alt="Металлочерепичная кровля готово" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/krovlya/v013.webp" alt="Кровля: фото объекта" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Кровельные работы</figcaption>
   </figure>
   
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/sanuzel/v016.webp" alt="Ремонт санузла белая плитка" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/sanuzel/v016.webp" alt="Санузлы: фото объекта" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Ремонт санузлов под ключ</figcaption>
   </figure>
   
   <figure style="margin:0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    <img src="/images/projects/otdelka/v004.webp" alt="Отделка интерьера штукатурка покраска" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+    <img src="/images/projects/otdelka/v004.webp" alt="Отделка: фото объекта" style="width:100%; aspect-ratio:4/3; object-fit:cover;">
     <figcaption style="padding:10px; background:white; font-size:0.9rem; color:#555;">Чистовая отделка квартир</figcaption>
   </figure>
 </div>
@@ -41,7 +41,7 @@
 ## Дома из дерева
 
 ### Дом из профилированного бруса 6×8 одноэтажный
-<img src="/images/projects/dom-brus/v011.webp" alt="Дом из бруса 6×8 фасад" width="100%" style="border-radius:8px; margin-bottom:15px;">
+<img src="/images/projects/dom-brus/v011.webp" alt="Дом из бруса: фото объекта" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** ~48 м²  
 **Цена от:** 950 000 ₽ (коробка) / 1 800 000 ₽ (под ключ)  
 **Срок:** 10–14 недель  
@@ -49,8 +49,8 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/dom-brus/v023.webp" alt="Коробка дома" width="48%">
-  <img src="/images/projects/dom-brus/v025.webp" alt="Фасад готовый" width="48%">
+  <img src="/images/projects/dom-brus/v023.webp" alt="Дома: процесс сборки" width="48%">
+  <img src="/images/projects/dom-brus/v025.webp" alt="Дома: фото объекта" width="48%">
 </div>
 
 ### Дом из оцилиндрованного бревна 6×8
@@ -68,7 +68,7 @@
 ## Бани из дерева
 
 ### Баня из бруса 4×6
-<img src="/images/projects/banya-brus/v007.webp" alt="Баня 4×6 снаружи" width="100%" style="border-radius:8px; margin-bottom:15px;">
+<img src="/images/projects/banya-brus/v007.webp" alt="Бани: фото объекта" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Размер:** 4×6 м (~24 м²)  
 **Цена от:** 450 000 ₽ (коробка) / 850 000 ₽ (под ключ с печью)  
 **Срок:** 6–8 недель  
@@ -83,16 +83,16 @@
 
 Узнаваемый треугольный фасад, высокий чек, идеально для аренды или дачи выходного дня.
 
-<img src="/images/projects/aframe/v042.webp" alt="A-frame гостевой дом фасад" width="100%" style="border-radius:8px; margin-bottom:15px;">
+<img src="/images/projects/aframe/v042.webp" alt="A-frame: фото объекта" width="100%" style="border-radius:8px; margin-bottom:15px;">
 **Площадь:** обычно 30–50 м²  
 **Цена от:** 1 000 000 ₽ (коробка) / 1 700 000 ₽ (под ключ)  
 **Срок:** 8–12 недель  
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/aframe/v028.webp" alt="Интерьер A-frame" width="32%">
-  <img src="/images/projects/aframe/v042.webp" alt="Вид сверху" width="32%">
-  <img src="/images/projects/aframe/v043.webp" alt="Фасад зимой" width="32%">
+  <img src="/images/projects/aframe/v028.webp" alt="A-frame: фото объекта" width="32%">
+  <img src="/images/projects/aframe/v042.webp" alt="A-frame: фото объекта" width="32%">
+  <img src="/images/projects/aframe/v043.webp" alt="A-frame: фото объекта" width="32%">
 </div>
 
 ## Террасы, навесы, беседки
@@ -101,9 +101,9 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/terrasa/v006.webp" alt="Терраса пристроенная" width="32%">
-  <img src="/images/projects/terrasa/v008.webp" alt="Беседка открытая" width="32%">
-  <img src="/images/projects/terrasa/v009.webp" alt="Навес для авто" width="32%">
+  <img src="/images/projects/terrasa/v006.webp" alt="Террасы: фото объекта" width="32%">
+  <img src="/images/projects/terrasa/v008.webp" alt="Беседки: фото объекта" width="32%">
+  <img src="/images/projects/terrasa/v009.webp" alt="Навесы: фото объекта" width="32%">
 </div>
 
 **Цены:** терраса до 20 м² — от 180 000 ₽ (коробка) / 350 000 ₽ (под ключ). Срок 3–5 недель.
@@ -114,9 +114,9 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/krovlya/v005.webp" alt="Стропила в процессе" width="32%">
+  <img src="/images/projects/krovlya/v005.webp" alt="Кровля: процесс монтажа" width="32%">
   <img src="/images/projects/krovlya/v013.webp" alt="Металлочерепица готово" width="32%">
-  <img src="/images/projects/krovlya/v014.webp" alt="Фальцевая крыша" width="32%">
+  <img src="/images/projects/krovlya/v014.webp" alt="Кровля: фото объекта" width="32%">
 </div>
 
 **Цены:** металлочерепица до 100 м² — от 350 000 ₽. Срок 5–10 дней.
@@ -128,7 +128,7 @@
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <img src="/images/projects/sanuzel/v016.webp" alt="Санузел белый плитка" width="48%">
-  <img src="/images/projects/sanuzel/v018.webp" alt="Инсталляция унитаза" width="48%">
+  <img src="/images/projects/sanuzel/v018.webp" alt="Санузлы: процесс монтажа" width="48%">
 </div>
 
 **Цены:** стандартный санузел под ключ — от 85 000 ₽. Срок 14–21 день.
@@ -139,9 +139,9 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/otdelka/v002.webp" alt="Лаги пола" width="32%">
-  <img src="/images/projects/otdelka/v003.webp" alt="Стяжка ровная" width="32%">
-  <img src="/images/projects/otdelka/v004.webp" alt="Штукатурка стен" width="32%">
+  <img src="/images/projects/otdelka/v002.webp" alt="Отделка: процесс работ" width="32%">
+  <img src="/images/projects/otdelka/v003.webp" alt="Отделка: процесс работ" width="32%">
+  <img src="/images/projects/otdelka/v004.webp" alt="Отделка: процесс работ" width="32%">
 </div>
 
 ## Фундаменты
@@ -150,8 +150,8 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/fundament/v001.webp" alt="Сваи забиты" width="48%">
-  <img src="/images/projects/fundament/v039.webp" alt="Армирование плиты" width="48%">
+  <img src="/images/projects/fundament/v001.webp" alt="Фундаменты: процесс работ" width="48%">
+  <img src="/images/projects/fundament/v039.webp" alt="Фундаменты: процесс работ" width="48%">
 </div>
 
 **Цены:** свайно-винтовой фундамент на участок 6×8 — от 180 000 ₽. Срок 3–7 дней.
@@ -165,8 +165,8 @@
 
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-  <img src="/images/projects/zima/v035.webp" alt="Зимняя коробка" width="48%">
-  <img src="/images/projects/zima/v036.webp" alt="Тепляк для бетона" width="48%">
+  <img src="/images/projects/zima/v035.webp" alt="Зимняя стройка: фото объекта" width="48%">
+  <img src="/images/projects/zima/v036.webp" alt="Зимняя стройка: процесс работ" width="48%">
 </div>
 
 ## Этапы строительства дома из бруса 6×8
