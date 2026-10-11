@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stroyaltai.ru/sitemap.xml
+Sitemap: https://www.stroyaltai.ru/sitemap.xml
