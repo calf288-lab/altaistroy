@@ -136,7 +136,7 @@ export default function ConsultationModal({
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-3.5">
+            <form onSubmit={(e) => { if (typeof window !== "undefined" && (window as any).ym) { (window as any).ym(112326919, "reachGoal", "lead_send"); } handleSubmit(e); }} className="space-y-3.5">
               <div>
                 <label className="block text-xs font-bold text-[#b8c7bc] uppercase tracking-wider mb-1">
                   Ваше имя:

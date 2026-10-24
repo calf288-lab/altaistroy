@@ -240,7 +240,7 @@ export default function LeadForm({ onOpenPrivacy, preselectedService }: LeadForm
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={(e) => { if (typeof window !== "undefined" && (window as any).ym) { (window as any).ym(112326919, "reachGoal", "lead_send"); } handleSubmit(e); }} className="space-y-4">
                   
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>

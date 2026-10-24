@@ -357,7 +357,7 @@ export default function Calculator({ onOpenConsultationWithData }: CalculatorPro
                   </a>
                 </div>
               ) : (
-                <form onSubmit={handleCallbackSubmit} className="space-y-2 pt-1">
+                <form onSubmit={(e) => { if (typeof window !== "undefined" && (window as any).ym) { (window as any).ym(112326919, "reachGoal", "calculator_lead"); } handleCallbackSubmit(e); }} className="space-y-2 pt-1">
                   <div className="flex gap-2">
                     <input
                       type="tel"
