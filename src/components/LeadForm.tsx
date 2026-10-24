@@ -34,6 +34,9 @@ export default function LeadForm({ onOpenPrivacy, preselectedService }: LeadForm
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!phone) return;
+    if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(112326919, 'reachGoal', 'lead_send');
+    }
 
     setIsSubmitting(true);
     const compiled = getCompiledText();
