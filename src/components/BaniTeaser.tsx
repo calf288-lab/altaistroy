@@ -27,7 +27,7 @@ export default function BaniTeaser() {
             { src: '/bani/img/bani-13.jpg', n: 13 },
           ].map((p) => (
             <a key={p.n} href="/bani/" className="group block rounded-xl overflow-hidden border border-[#1e2820] bg-[#101512] hover:border-[#d3a168] transition-colors">
-              <img src={p.src} alt={\`Проект бани ${p.n}\`} className="w-full h-44 object-cover" loading="lazy" />
+              <img src={p.src} alt={`Проект бани ${p.n}`} className="w-full h-44 object-cover" loading="lazy" />
               <div className="px-4 py-3">
                 <p className="text-[#edece6] text-sm font-semibold">Баня из бруса</p>
                 <p className="text-[#a8b3aa] text-xs mt-0.5">профилированный брус 140×140</p>
