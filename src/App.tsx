@@ -6,6 +6,7 @@ import Calculator from './components/Calculator';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import BaniTeaser from './components/BaniTeaser';
+import DomaTeaser from './components/DomaTeaser';
 import WhyAltai from './components/WhyAltai';
 import Process from './components/Process';
 import ReviewsAndFaq from './components/ReviewsAndFaq';
@@ -54,6 +55,7 @@ export default function App() {
 
         {/* 4.5 Bani catalog teaser (48 проектов) */}
         <BaniTeaser />
+        <DomaTeaser />
 
         {/* 5. Specifics of Mountain Construction on Altai */}
         <WhyAltai />
