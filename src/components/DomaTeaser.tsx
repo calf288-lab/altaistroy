@@ -27,7 +27,7 @@ export default function DomaTeaser() {
             { src: '/images/projects/dom-brus/teaser-kedr-zima.jpg', alt: 'Дом из кедра зимней сборки' },
           ].map((p, i) => (
             <a key={i} href="/blog/dom-brus-cena-altai.html" className="group block rounded-xl overflow-hidden border border-[#1e2820] bg-[#101512] hover:border-[#d3a168] transition-colors">
-              <img src={p.src} alt={p.alt} className="w-full h-64 object-cover object-top" loading="lazy" />
+              <img src={p.src} alt={p.alt} className="w-full h-64 object-cover object-[50%_65%]" loading="lazy" />
             </a>
           ))}
         </div>
