@@ -22,9 +22,9 @@ export default function DomaTeaser() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
           {[
-            { src: '/images/projects/dom-brus/v026.webp', alt: 'Проект дома из бруса 120 м²' },
-            { src: '/images/projects/dom-brus/v030.webp', alt: 'Проект дома из бруса 150 м²' },
-            { src: '/images/projects/dom-brus/hero-house.webp', alt: 'Дом из бруса под ключ' },
+            { src: '/images/projects/dom-brus/teaser-brus.png', alt: 'Дом из профилированного бруса — сборка под ключ' },
+            { src: '/images/projects/dom-brus/teaser-aframe.png', alt: 'A-frame гостевой дом под ключ' },
+            { src: '/images/projects/dom-brus/teaser-kedr-zima.png', alt: 'Дом из кедра зимней сборки' },
           ].map((p, i) => (
             <a key={i} href="/blog/dom-brus-cena-altai.html" className="group block rounded-xl overflow-hidden border border-[#1e2820] bg-[#101512] hover:border-[#d3a168] transition-colors">
               <img src={p.src} alt={p.alt} className="w-full h-64 object-cover object-top" loading="lazy" />
